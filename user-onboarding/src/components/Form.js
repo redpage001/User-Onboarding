@@ -115,7 +115,7 @@ const Form = () => {
                     value={formState.name}
                     onChange={inputChange}
                 />
-                {errors.name.length > 0 ? <p>{errors.name}</p> : null}
+                {errors.name.length > 0 ? <p id="nameP">{errors.name}</p> : null}
             </label>
 
             <br/>
@@ -128,7 +128,7 @@ const Form = () => {
                     value={formState.email}
                     onChange={inputChange}
                 />
-                {errors.email.length > 0 ? <p>{errors.email}</p> : null}
+                {errors.email.length > 0 ? <p id="emailP">{errors.email}</p> : null}
             </label>
 
             <br/>
@@ -141,7 +141,7 @@ const Form = () => {
                     value={formState.password}
                     onChange={inputChange}
                 />
-                {errors.password.length > 0 ? <p>{errors.password}</p> : null}
+                {errors.password.length > 0 ? <p id="passwordP">{errors.password}</p> : null}
             </label>
                 
             </FirstContainer>
@@ -150,9 +150,9 @@ const Form = () => {
 
             <label htmlFor="positions">Role:
                 <select id="positions" name="positions" onChange={inputChange}>
-                    <option value="FrontEnd">Front End</option>
-                    <option value="BackEnd"> Back End</option>
-                    <option value="TeamLead"> Team Lead</option>
+                    <option value="Front End">Front End</option>
+                    <option value="Back End"> Back End</option>
+                    <option value="Team Lead"> Team Lead</option>
                 </select>
             </label>
 
@@ -166,7 +166,7 @@ const Form = () => {
                     checked={formState.terms}
                     onChange={inputChange}
                 />
-                {errors.terms.length > 0 ? <p>{errors.terms}</p> : null}
+                {errors.terms.length > 0 ? <p id="termsP">{errors.terms}</p> : null}
             </label>
             <pre>{JSON.stringify(post, null, 2)}</pre>
             <button disabled={buttonDisabled}>Submit</button>
